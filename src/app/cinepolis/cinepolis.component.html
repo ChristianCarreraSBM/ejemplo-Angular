@@ -1,0 +1,69 @@
+
+<img src="https://cpp-prod-occ-company-image-uploads.s3.amazonaws.com/867012/logo/35cb6b70-b9be-11ea-b923-6b7948a7b472.png?1593403718740" 
+width="300" height="100"><br>
+ 
+
+<br><br> <div class="input-group mb-3">
+    <img src="https://es-mx-media.shopfully.cloud/images/catene/segnalino_cinepolis@2x.png" 
+width="50" height="50">
+    <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+    <input type="text" [(ngModel)]="nombre" name="nombre" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div><br>
+
+  <div class="input-group mb-3">
+    <img src="https://static.vecteezy.com/system/resources/previews/002/077/041/non_2x/people-icon-in-blue-circle-free-vector.jpg" 
+    width="50" height="50">
+    <span class="input-group-text" id="inputGroup-sizing-default">Cantidad de Personas</span>
+    <input type="number" [(ngModel)]="personas" name="personas" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div><br>
+  
+
+   <div>
+  <span  class="input-group-text" id="inputGroup-sizing-default">
+  <img src="https://static.vecteezy.com/system/resources/previews/010/141/263/non_2x/credit-card-icon-sign-symbol-design-free-png.png" 
+    width="30" height="30"> &nbsp;Tarjeta de Cinepolis / Cinepolis</span><br>
+  <input class="form-check-input" [(ngModel)]="tarjeta"  type="radio" value="Si" name="tarjeta" id="flexCheckDefault"> Si<br>
+  <input class="form-check-input" [(ngModel)]="tarjeta"  type="radio" value="No" name="tarjeta" id="flexCheckDefault"> No<br><br>
+  </div>
+
+  <div class="input-group mb-3">
+    
+    <span class="input-group-text" id="inputGroup-sizing-default"><img src="https://costaline.com.mx/img/icon-header/icon-boletos-autobus.png" 
+      width="30" height="30">&nbsp;Cantidad de Boletos</span>
+    <input type="number" [(ngModel)]="boletos" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <br>
+
+  <div>{{msj}}</div> <br>
+
+
+<div>
+<button (click)="registrar()" class="btn btn-primary btn-sm"> Ingresar </button>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="cancelar()" class="btn btn-primary btn-sm"> Cancelar </button>
+</div>
+
+<div class="col-6">
+    <div class="col-12 my-3" align="center">
+
+        <h1><br><img src="https://www.unhcr.org/registration-guidance/wp-content/uploads/sites/52/2018/06/icon_notes_blue2.png" 
+          width="50" height="50" >
+           Registro</h1>
+    </div>
+    <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Total a pagar</span>
+        <input type="text" class="form-control" [(ngModel)]="total" aria-label="Sizing example input" 
+        aria-describedby="inputGroup-sizing-sm" value="{{total}}" readonly>
+    </div>
+    <div>Nombre:
+        {{nombre}}</div>
+        <div>Cantidad Compradores: {{personas}}</div>
+        <div>Cantidad Boletos: {{boletos}} </div>
+        
+</div>
+<br>
+
+
+
+
+

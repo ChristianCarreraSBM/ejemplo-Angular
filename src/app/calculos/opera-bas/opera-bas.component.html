@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-6"> 
+   <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Numero 1</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="num1" name="num1" class="form-control" id="num1">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Numero 2</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="num2"name="num2" class="form-control" id="num2">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label">Operacion:</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="operacion" name="operacion" class="form-control" id="operacion">
+        
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+     <button (click)="sumar()" class="btn btn-primary">Calcular</button>
+    </div>
+  </div>
+    
+  <div class="col-6">
+      <h1>Resultado:{{resultado}}</h1>
+  </div>
+  </div>
+
+  
+  
+

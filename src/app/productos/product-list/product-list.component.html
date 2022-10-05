@@ -1,0 +1,51 @@
+<div class="card">
+    <div class="car-headere">
+        Lista de Productos
+    </div>
+</div>
+<div class ="card-body">
+    <div class="row">
+        <div class="col-md-2">filtrar por: </div>
+        <div class="col md-4">
+            <input type="text" [(ngModel)]="listFilter" class="form-control" name="filter">
+        </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h3> Filtro: {{listFilter}}</h3>
+    </div>
+</div>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <button (click)="ShowImagen()" class="btn btn-primary">{{muestraImg ?'Ocultar':'Mostrar'}} Imagen</button>
+                </th>
+                <th>Modelo</th>
+                <th>Descripcion</th>
+                <th>Marca</th>
+                <th>Año</th>
+                <th>Precios</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let coche of  productos | productoFiltro:listFilter">
+                <td><img [src]= "coche.imagenUrl"
+                *ngIf="muestraImg"
+                [title]="coche.modelo"
+                [style.width.px]="imageWidth"
+                [style.margin.px]="imageMargin"
+                ></td>
+
+                <td>{{coche.modelo}}</td>
+                <td>{{coche.descripcion}}</td>
+                <td>{{coche.marca | uppercase}}</td>
+                <td>{{coche.year | date:"dd/MM/yy"}}</td>
+                <td>{{coche.precio |currency}}</td>
+                <td>{{coche.puntos}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

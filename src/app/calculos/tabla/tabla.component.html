@@ -1,0 +1,24 @@
+
+
+<p>Tablas de Multiplicar</p>
+<div class="row">
+    <div class="col-6"> 
+     <div class="mb-3 row">
+        <label for="uno" class="col-sm-2 col-form-label">Asigna el numero</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="uno" name="uno" class="form-control" id="uno">
+        </div>
+      </div>
+      
+
+  
+      <div class="mb-3 row">
+       <button (click)="tabla()" class="btn btn-primary">Generar Tablas</button>
+      </div>
+    </div>
+      
+    <div class="col-6">
+        <div><h1>Tabla de Multiplicar:</h1></div>
+        <div *ngFor="let res of res">{{res}}</div>
+    </div>
+    </div>
